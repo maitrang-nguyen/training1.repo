@@ -1,0 +1,14 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:html="http://www.w3.org/1999/xhtml" controllerName="training1-app.demos.modules.main">
+	<Page title="Modules Demo" showNavButton="true" navButtonPress="onNavBack">
+		<content>
+			
+			<l:VerticalLayout>
+			        <Label text="{= 'Bonus days off: ' + ${/bonusDays} }"/>
+			        <Label text="{= 'Bonus days off: ' + ${/bonusDays2} }"/>
+			</l:VerticalLayout>
+			
+		</content>
+	</Page>
+</mvc:View>

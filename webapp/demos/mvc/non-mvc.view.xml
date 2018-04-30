@@ -1,0 +1,15 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" 
+	controllerName="training1-app.demos.mvc.non-mvc">
+	<Page title="Non MVC Demo" showNavButton="true" navButtonPress="onNavBack">
+		<content>
+			
+			<Input id="inputYears" placeholder="Years at company" width="200px"/>
+			<Button text="Calculate bonus days" press="calculateBonusDays" width="200px"/>
+			<l:HorizontalLayout class="bonusDaysContainer">
+			    	<Label text="Bonus days off: "/>
+			        <Label text="0" id="labelDays" width="100%"/>
+			</l:HorizontalLayout>
+		
+		</content>
+	</Page>
+</mvc:View>

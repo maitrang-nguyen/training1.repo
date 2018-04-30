@@ -1,0 +1,21 @@
+/* Enter your custom styles here */
+.mainPage {
+	text-align: center;
+}
+
+.demoButton {
+	margin: 50px auto;
+	display: block;
+}
+
+.bonusDaysContainer {
+	display: block;
+}
+
+bdi {
+	white-space: pre;
+}
+
+.expressionBindingContainer {
+	margin-top: 50px;
+}

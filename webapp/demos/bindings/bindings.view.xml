@@ -1,0 +1,46 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form"
+	xmlns:html="http://www.w3.org/1999/xhtml" controllerName="training1-app.demos.bindings.bindings">
+	<Page title="MVC Demo" showNavButton="true" navButtonPress="onNavBack">
+		<content>
+			<f:SimpleForm id="form1" editable="true">
+				<f:content>
+					<Label text=" Company Name"/>
+					<Input value="{form>/company/name}"/>
+					<Label text="Company Address"/>
+					<Input value="{form>/company/address}"></Input>
+				</f:content>
+			</f:SimpleForm>
+			<f:SimpleForm id="form2" editable="true" binding="{form>/company}">
+				<f:content>
+					<Label text=" Company Name"/>
+					<Input value="{form>name}"/>
+					<Label text="Company Address"/>
+					<Input value="{form>address}"></Input>
+				</f:content>
+			</f:SimpleForm>
+			<List items="{/companies}">
+				<items>
+					<StandardListItem title="{name}" description="{city}"/>
+				</items>
+			</List>
+			<l:VerticalLayout class="expressionBindingContainer">
+				<Label text="{= 'Bonus days off: ' + ${/bonusDays} }"/>
+				<Label text="{= 'Bonus days off: ' + (${/bonusDays2} === 0 ? 'None' : ${/bonusDays}) }"/>
+				
+				<Text text="{ 
+					path: '/date', 
+					formatter: '.dateFormatter'
+				}"/>
+				
+				<Text text="{ 
+					path: '/date', 
+					type: 'sap.ui.model.type.Date', 
+					formatOptions: { 
+						pattern: 'yyyy/MM/dd' 
+					} 
+				}"/>
+				
+			</l:VerticalLayout>
+		</content>
+	</Page>
+</mvc:View>

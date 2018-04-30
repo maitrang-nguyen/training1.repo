@@ -1,0 +1,162 @@
+{
+	"_version": "1.7.0",
+	"sap.app": {
+		"id": "training1-app",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		}
+	},
+
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_belize"
+
+		]
+	},
+
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "training1-app.view.App",
+			"type": "XML"
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "training1-app",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"transition": "slide",
+				"async": true
+			},
+			"routes": [{
+				"pattern": "",
+				"name": "appHome",
+				"target": "home"
+			}, {
+				"pattern": "mvc",
+				"name": "mvcDemo",
+				"target": "mvc"
+			}, {
+				"pattern": "nonmvc",
+				"name": "nonMvcDemo",
+				"target": "nonMvc"
+			}, {
+				"pattern": "model",
+				"name": "modelDemo",
+				"target": "model"
+			},
+			{
+				"pattern": "bindings",
+				"name": "bindingsDemo",
+				"target": "bindings"
+			},
+			{
+				"pattern": "modules",
+				"name": "modulesDemo",
+				"target": "modules"
+			},
+			{
+				"pattern": "validation",
+				"name": "validationDemo",
+				"target": "validation"
+			}],
+			"targets": {
+				"home": {
+					"viewId": "home",
+					"viewPath": "training1-app.view",
+					"viewName": "Home",
+					"viewLevel": 1
+				},
+				"mvc": {
+					"viewId": "mvc",
+					"viewName": "mvc",
+					"viewPath": "training1-app.demos.mvc",
+					"viewLevel": 1
+				},
+				"nonMvc": {
+					"viewId": "nonMvc",
+					"viewName": "non-mvc",
+					"viewPath": "training1-app.demos.mvc",
+					"viewLevel": 1
+				},
+				"model": {
+					"viewId": "model",
+					"viewName": "model",
+					"viewPath": "training1-app.demos.mvc",
+					"viewLevel": 1
+				},
+				"bindings": {
+					"viewId": "bindings",
+					"viewName": "bindings",
+					"viewPath": "training1-app.demos.bindings",
+					"viewLevel": 1
+				},
+				"modules": {
+					"viewId": "modules-main",
+					"viewName": "main",
+					"viewPath": "training1-app.demos.modules",
+					"viewLevel": 1
+				},
+				"validation": {
+					"viewId": "validation-main",
+					"viewName": "main",
+					"viewPath": "training1-app.demos.validation",
+					"viewLevel": 1
+				}
+			}
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {},
+				"sap.ushell": {},
+				"sap.collaboration": {},
+				"sap.ui.comp": {},
+				"sap.uxap": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "training1-app.i18n.i18n"
+				}
+			}
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		}
+	}
+}

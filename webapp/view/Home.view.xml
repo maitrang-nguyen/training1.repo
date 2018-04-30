@@ -1,0 +1,13 @@
+<mvc:View controllerName="training1-app.controller.Home" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<Page title="{i18n>title}" class="mainPage">
+		<content>
+			<Button class="demoButton" text="MVC Demo" press="onMVCDemoPress"></Button>
+			<Button class="demoButton" text="Non MVC Demo" press="onNonMVCDemoPress"></Button>
+			<Button class="demoButton" text="MVC Model Demo" press="onModelDemoPress"></Button>
+			<Button class="demoButton" text="Bindings Demo" press="onBindingsDemoPress"></Button>
+			<Button class="demoButton" text="Validation Demo" press="onValidationDemoPress"></Button>
+			<Button class="demoButton" text="Modules Demo" press="onModulesDemoPress"></Button>
+		</content>
+	</Page>
+</mvc:View>
